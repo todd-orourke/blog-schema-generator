@@ -11,7 +11,7 @@ Flow for each URL in URLS_TO_PROCESS:
   4. Build five JSON-LD objects: WebSite, BlogPosting, Organization,
      BreadcrumbList, and (if found) FAQPage
   5. [Optional] Use Gemini 2.5 Flash ONLY to generate answers for detected FAQ
-     questions — enable via USE_GEMINI_FOR_FAQ = True
+     questions, enable via USE_GEMINI_FOR_FAQ = True
   6. Write each schema as its own <script type="application/ld+json"> block
      to output/<slug>-schema.txt
 
@@ -56,12 +56,12 @@ load_dotenv()
 URLS_TO_PROCESS: list[dict[str, str]] = [
     {
         "url": "https://www.savvywealth.com/blog-posts/the-ai-bubble-the-ice-maker",
-        "author_name": "Lindsey K. Leaverton"
+        "author_name": "Lindsey K. Leaverton",
         "author_url": "https://www.savvywealth.com/advisor/lindsey-k-leaverton",
     },
     {
         "url": "https://www.savvywealth.com/blog-posts/construction-and-renovation-financing-in-an-era-of-economic-fragility",
-        "author_name": "David Gottlieb"
+        "author_name": "David Gottlieb",
         "author_url": "https://www.savvywealth.com/advisor/david-gottlieb",
     },
     # Add more entries like:
